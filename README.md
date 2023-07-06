@@ -1,3 +1,3 @@
 # Internet-speed-test
 
-[![GitHub Streak](https://streak-stats.demolab.com/?borispuljak=DenverCoder1)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com/borispuljakDenverCoder1)](https://git.io/streak-stats)
