@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet speed test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+        <h1 class="name">Speed test</h1>
+    </div>
+    </header>
+    <div class="container">
+        <div class="loader-widget">
+            <h1>Check your internet speed</h1>
+            <span class="loader hide"></span>
+            <div class="loader-content">
+                <div class="content hide">24 <small>Mbps</small></div>
+                <button>Check</button>
+            </div>
+                
+        </div>
+    </div>
+</body>
+
+<script>
+    document.querySelector("button").addEventListener("click",(e)=>{
+        var imageLink="https://upload.wikimedia.org/wikipedia/commons/4/47/Alfa_GT_20090801_front.JPG",
+        downloadSize=1709251,
+        t_start, t_end,
+        downloadSrc = new Image();
+        document.querySelector(".loader-content").classList.add("hide");
+        document.querySelector(".loader").classList.remove("hide");
+        t_start=new Date().getTime();
+        var chacheImg="?nn="+t_start;
+        downloadSrc.src=imageLink+chacheImg;
+        console-log(downloadSrc);
+        downloadSrc.onload=function(){
+            t_end=new Date().getTime();
+            var t_duration=(t_end-t_start)/1000,
+            speed=((downloadSize/t_duration)/1024/1024).toFixed(2);
+            
+        }
+    })
+</script>
+
+</html>
